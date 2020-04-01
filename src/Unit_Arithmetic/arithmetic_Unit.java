@@ -43,8 +43,8 @@ public class arithmetic_Unit {
 	            writer1.flush();
 	            System.out.println(maths);  //打印表达式
 	        }
-	        else if(operator==1) {  //运算符为减时
-	            int numerator=a1*b2-a2*b1>=0?a1*b2-a2*b1:a2*b1-a1*b2;  //减法的两种情况，因为e1>=e2
+	        else if(operator==1&&a1*b2-a2*b1>=0) {  //运算符为减时，且e1>=e2
+	            int numerator=a1*b2-a2*b1;  
 	            int denominator=a2*b2;
 	            result[i]=k+':'+calculation(numerator, denominator)+'\n';
 	            maths=k+':'+(String)expression(a1,a2)+'-'+(String)expression(b1,b2)+'='+'\n';
